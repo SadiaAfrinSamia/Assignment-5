@@ -68,6 +68,10 @@ nav {
   color: white;
   cursor: pointer;
   transition: background 0.2s;
+   border: 1px solid #e5e7eb;
+  
+  padding: 6px 12px;
+  font-size: 14px;
 }
 
 .copy-btn:hover {
@@ -254,6 +258,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
 }
 
 /* History list */

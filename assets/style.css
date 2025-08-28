@@ -178,6 +178,35 @@ main {
   margin-top: 5px;
   font-size: 12px;
 }
+/* Icon inside card */
+.card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+/* Service name below icon */
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-name {
+  margin-top: 6px;
+}
+
+.service-name .bn {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.service-name .en {
+  font-size: 13px;
+  color: #6b7280; /* Gray */
+}
+
 
 /* ================================
    Card Actions (Buttons)

@@ -60,6 +60,11 @@ function renderCards(){
     li.textContent=`${name} (${num}) — ${time}`;
     document.getElementById('historyList').appendChild(li);
   });
+  // Clear history button functionality
+document.getElementById("clearHistory").addEventListener("click", () => {
+  document.getElementById("historyList").innerHTML = "";
+});
+
 }
 
 renderCards();

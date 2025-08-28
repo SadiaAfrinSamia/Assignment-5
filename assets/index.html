@@ -2,36 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Make page responsive on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
   <title>Emergency Service — Bangladesh</title>
+  
+  <!-- Link external stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <!-- ================================
+       Navigation Bar
+       ================================ -->
   <nav>
-    <div class="brand">🇧🇩 Emergency Service</div>
-    <div class="stats">
-      <div class="stat">💗 <span id="heartCount">0</span></div>
-      <div class="stat">💰 <span id="coinCount">100</span></div>
-      <div class="stat">📋 <span id="copyCount">0</span></div>
+  <!-- Left: Logo + Website Name -->
+  <div class="brand">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="brand-text">
+      <span class="line1">Emergency</span>
+      <span class="line2">Service</span>
     </div>
-  </nav>
+  </div>
 
-  <section class="hero">
-    <h1>জরুরি সেবা ডিরেক্টরি</h1>
-    <p>Government Emergency Services at Your Fingertip</p>
-  </section>
+  <!-- Right: Heart, Coin, Copy -->
+  <div class="stats">
+    <div class="stat">
+      <span id="heartCount">0</span> <img src="heart.png" alt="Heart" class="icon">
+    </div>
+    <div class="stat">
+      <span id="coinCount">100</span> 
+      <img src="coin.png" alt="Coin" class="icon" />
+    </div>
+    <div class="stat copy-btn">
+      <span id="copyCount">0</span> Copy
+    </div>
+  </div>
+</nav>
 
+
+  <!-- ================================
+     Hero Section
+     ================================ -->
+<section class="hero">
+  <!-- Logo -->
+  <img src="logo.png" alt="Logo" class="hero-logo" />
+
+  <!-- Title -->
+  <h1>জরুরি সেবা ডিরেক্টরি</h1>
+
+  <!-- Slogan -->
+  <p>Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+</section>
+
+
+  <!-- ================================
+       Main Content
+       ================================ -->
   <main>
+    <!-- Cards Section (Dynamic emergency service cards will be injected here via JS) -->
     <section class="cards" id="cards"></section>
+    
+    <!-- Sidebar: Call History -->
     <aside class="history">
       <div class="history-header">
         <h3>📞 Call History</h3>
+        <!-- Clear history button -->
         <button id="clearHistory">Clear</button>
       </div>
+      <!-- List of called services -->
       <ul id="historyList"></ul>
     </aside>
   </main>
 
+  <!-- ================================
+       JavaScript File
+       ================================ -->
   <script src="script.js"></script>
 </body>
 </html>

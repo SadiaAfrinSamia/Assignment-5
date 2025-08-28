@@ -1,22 +1,247 @@
-body {margin:0;font-family:sans-serif;background:#f4f7f9;}
-nav {display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#064e3b;color:white;}
-.brand {display:flex;align-items:center;gap:10px;font-weight:bold;}
-.stats {display:flex;gap:15px;align-items:center;}
-.stat {background:#047857;padding:5px 12px;border-radius:20px;}
-.hero {text-align:center;padding:40px;background:linear-gradient(180deg,#064e3b,#10b981);color:white;}
-main {display:grid;grid-template-columns:2fr 1fr;gap:20px;padding:20px;}
-.cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
-.card {background:white;border-radius:10px;padding:15px;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:relative;}
-.card button.heart {position:absolute;top:10px;left:10px;background:none;border:none;font-size:18px;cursor:pointer;}
-.head {display:flex;gap:10px;align-items:center;}
-.number {font-size:20px;font-weight:bold;margin-top:10px;}
-.badge {background:#e5e7eb;padding:4px 10px;border-radius:12px;display:inline-block;margin-top:5px;font-size:12px;}
-.actions {display:flex;gap:10px;margin-top:15px;}
-.actions button {flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-weight:bold;}
-.call {background:#10b981;color:white;}
-.copy {background:#f3f4f6;}
-.history {background:white;padding:15px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-.history-header {display:flex;justify-content:space-between;align-items:center;}
-.history ul {list-style:none;padding:0;margin:10px 0 0;}
-.history li {padding:8px;border-bottom:1px solid #e5e7eb;}
-@media(max-width:768px){main{grid-template-columns:1fr;}}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f4f7f9; 
+}
+
+/* ================================
+   Navigation Bar
+   ================================ */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #ffffff; /* White background */
+  border-bottom: 2px solid #064e3b; /* Green underline */
+}
+
+/* Left side (logo + name) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ .brand-text {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  line-height: 1.2;
+  font-weight: bold;
+  color: #064e3b;
+}
+.brand-text .line1 {
+  font-size: 16px;
+}
+
+.brand-text .line2 {
+  font-size: 16px;
+}
+
+.brand .logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* Right side (stats) */
+.stats {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ecfdf5; /* Light green background */
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #064e3b;
+}
+
+/* Copy button styling */
+.copy-btn {
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #059669;
+}
+/* Icon images for stats */
+.stat .icon {
+  width: 18px;   /* Adjust to match emoji size */
+  height: 18px;
+}
+
+
+/* ================================
+   Hero Section 
+   ================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(90deg, #02271d, #11726a); /* Full gradient background */
+  color: white;
+}
+
+/* Logo at top-center */
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.hero h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Slogan */
+.hero p {
+  font-size: 14px;
+  margin-top: 10px;
+  max-width: 800px;
+}
+
+
+/* ================================
+   Layout (Main Content)
+   ================================ */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 for cards, 1/3 for history */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ================================
+   Cards Section
+   ================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 16px;
+}
+
+/* Individual card */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  position: relative;
+}
+
+/* Heart button inside card */
+.card button.heart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Card header (icon + text) */
+.head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Emergency number */
+.number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Service category badge */
+.badge {
+  background: #e5e7eb;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* ================================
+   Card Actions (Buttons)
+   ================================ */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actions button {
+  flex: 1; /* Both buttons take equal width */
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Call button */
+.call {
+  background: #10b981; /* Green */
+  color: white;
+}
+
+/* Copy button */
+.copy {
+  background: #f3f4f6; /* Light gray */
+}
+
+/* ================================
+   Call History Section
+   ================================ */
+.history {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* History header (title + clear button) */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* History list */
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.history li {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Stack layout for small screens */
+  }
+}

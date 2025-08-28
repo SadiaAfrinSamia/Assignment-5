@@ -16,7 +16,7 @@ function renderCards(){
   const cards=document.getElementById('cards');
   cards.innerHTML=services.map(s=>`
     <div class="card">
-      <button class="heart">💗</button>
+      <button class="heart"><img src="icons8-heart-50.png" alt="Heart" /></button>
       <!-- Icon + Name -->
       <div class="head">
         <img src="${s.icon}" alt="${s.en}" class="card-icon" />
@@ -35,13 +35,13 @@ function renderCards(){
       </div>
     </div>`).join('');
   
-  // Heart button
+  
   document.querySelectorAll('.heart').forEach(btn=>btn.onclick=()=>{
     heartCount++;
     document.getElementById('heartCount').innerText=heartCount;
   });
 
-  // Copy button
+ 
   document.querySelectorAll('.copy').forEach(btn=>btn.onclick=()=>{
     const num=btn.dataset.number;const name=btn.dataset.name;
     navigator.clipboard.writeText(num);
@@ -49,7 +49,7 @@ function renderCards(){
     copyCount++;document.getElementById('copyCount').innerText=copyCount;
   });
 
-  // Call button
+  
   document.querySelectorAll('.call').forEach(btn=>btn.onclick=()=>{
     if(coinCount<20){alert('Not enough coins!');return;}
     const num=btn.dataset.number;const name=btn.dataset.name;
@@ -60,7 +60,7 @@ function renderCards(){
     li.textContent=`${name} (${num}) — ${time}`;
     document.getElementById('historyList').appendChild(li);
   });
-  // Clear history button functionality
+  
 document.getElementById("clearHistory").addEventListener("click", () => {
   document.getElementById("historyList").innerHTML = "";
 });

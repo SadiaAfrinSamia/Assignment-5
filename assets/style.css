@@ -55,7 +55,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #ecfdf5; /* Light green background */
+  background: #ecfdf5; 
   padding: 6px 12px;
   border-radius: 20px;
   font-weight: 600;
@@ -64,7 +64,7 @@ nav {
 
 /* Copy button styling */
 .copy-btn {
-  background: #10b981;
+  background: #10b96a;
   color: white;
   cursor: pointer;
   transition: background 0.2s;
@@ -90,7 +90,7 @@ nav {
   align-items: center;
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(90deg, #02271d, #11726a); /* Full gradient background */
+  background: linear-gradient(90deg, #02271d, #0e6538); /* Full gradient background */
   color: white;
 }
 
@@ -230,7 +230,7 @@ main {
 
 /* Call button */
 .call {
-  background: #10b981; /* Green */
+  background: #01b454; /* Green */
   color: white;
 }
 

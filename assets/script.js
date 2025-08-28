@@ -1,13 +1,13 @@
 const services = [
-  {id:'nat', name:'জাতীয় জরুরি সেবা', en:'National Emergency', number:'999', badge:'সার্বক্ষণিক', icon:'🛡️'},
-  {id:'pol', name:'পুলিশ', en:'Police', number:'999', badge:'পুলিশ', icon:'👮'},
-  {id:'fire', name:'ফায়ার সার্ভিস', en:'Fire Service', number:'999', badge:'দমকল', icon:'🚒'},
-  {id:'amb', name:'অ্যাম্বুলেন্স', en:'Ambulance', number:'1994-999999', badge:'স্বাস্থ্য', icon:'🚑'},
-  {id:'women', name:'নারী ও শিশু সহায়তা', en:'Women & Child Helpline', number:'109', badge:'সহায়তা', icon:'👩‍👧'},
-  {id:'acc', name:'দুদক', en:'Anti-Corruption', number:'106', badge:'সরকারি', icon:'⚖️'},
-  {id:'elec', name:'বিদ্যুৎ বিভ্রাট', en:'Electricity Outage', number:'16216', badge:'বিদ্যুৎ', icon:'icons/electricity.png'},
-  {id:'brac', name:'ব্র্যাক', en:'Brac', number:'16445', badge:'এনজিও', icon:'icons/brac.png'},
-  {id:'rail', name:'বাংলাদেশ রেলওয়ে', en:'Bangladesh Railway', number:'163', badge:'পরিবহন', icon:'icons/railway.png'},
+  {id:'nat', name:'জাতীয় জরুরি সেবা', en:'National Emergency', number:'999', badge:'সার্বক্ষণিক', icon:'emergency.png'},
+  {id:'pol', name:'পুলিশ', en:'Police', number:'999', badge:'পুলিশ', icon:'police.png'},
+  {id:'fire', name:'ফায়ার সার্ভিস', en:'Fire Service', number:'999', badge:'দমকল', icon:'fire-service.png'},
+  {id:'amb', name:'অ্যাম্বুলেন্স', en:'Ambulance', number:'1994-999999', badge:'স্বাস্থ্য', icon:'ambulance.png'},
+  {id:'women', name:'নারী ও শিশু সহায়তা', en:'Women & Child Helpline', number:'109', badge:'সহায়তা', icon:'emergency.png'},
+  {id:'acc', name:'দুদক', en:'Anti-Corruption', number:'106', badge:'সরকারি', icon:'emergency.png'},
+  {id:'elec', name:'বিদ্যুৎ বিভ্রাট', en:'Electricity Outage', number:'16216', badge:'বিদ্যুৎ', icon:'emergency.png'},
+  {id:'brac', name:'ব্র্যাক', en:'Brac', number:'16445', badge:'এনজিও', icon:'emergency.png'},
+  {id:'rail', name:'বাংলাদেশ রেলওয়ে', en:'Bangladesh Railway', number:'163', badge:'পরিবহন', icon:'emergency.png'},
 ];
 
 let heartCount=0, coinCount=100, copyCount=0;
